@@ -50,6 +50,7 @@ from . import tripclick
 from . import tweets2013_ia
 from . import vaswani
 from . import wapo
+from . import webfaq
 from . import wikiclir
 from . import wikir
 from . import trec_fair

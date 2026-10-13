@@ -7000,7 +7000,110 @@
       "cache_path": "trec-news-2020/qrels"
     }
   },
-  
+
+  "webfaq": {
+    "ara": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/ara.tar.gz",
+      "size_hint": 98130064,
+      "expected_md5": "fb1c59ccaba2221b1670b846aec77d59"
+    },
+    "dan": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/dan.tar.gz",
+      "size_hint": 90645328,
+      "expected_md5": "218d6b3e8b4fbdfb759f4f79ec580319"
+    },
+    "deu": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/deu.tar.gz",
+      "size_hint": 550447323,
+      "expected_md5": "a0d76a212bdbff0839013f8375c7a562"
+    },
+    "eng": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/eng.tar.gz",
+      "size_hint": 1956710559,
+      "expected_md5": "14611295d1c8eedd80db4ca15f5f90e1"
+    },
+    "fas": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/fas.tar.gz",
+      "size_hint": 219076383,
+      "expected_md5": "1921d193ef4cfd90ae5fba5974b4ca7a"
+    },
+    "fra": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/fra.tar.gz",
+      "size_hint": 433857101,
+      "expected_md5": "77f5bce88f2c84485e168146bda3a553"
+    },
+    "hin": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/hin.tar.gz",
+      "size_hint": 101362391,
+      "expected_md5": "738f7ba66240833dc799f6ef946d6956"
+    },
+    "ind": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/ind.tar.gz",
+      "size_hint": 99177245,
+      "expected_md5": "6618692cb8bc84f22c091cba4eb8d2a1"
+    },
+    "ita": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/ita.tar.gz",
+      "size_hint": 309565105,
+      "expected_md5": "4f89ed3a74af5d19353f8764de5260ff"
+    },
+    "jpn": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/jpn.tar.gz",
+      "size_hint": 343995483,
+      "expected_md5": "fe4f4d8d1b2df9a681273c59a37ec2ef"
+    },
+    "kor": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/kor.tar.gz",
+      "size_hint": 102723464,
+      "expected_md5": "10368db40e0f83eb6a51409aa8dc4d14"
+    },
+    "nld": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/nld.tar.gz",
+      "size_hint": 342519637,
+      "expected_md5": "645cee39c4ed725fb178f1a1d7060a82"
+    },
+    "pol": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/pol.tar.gz",
+      "size_hint": 213361447,
+      "expected_md5": "a922476ed3754e26ee818031a2f1f131"
+    },
+    "por": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/por.tar.gz",
+      "size_hint": 214819051,
+      "expected_md5": "6dddcf33d28117cdfcdd33117b7f95af"
+    },
+    "rus": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/rus.tar.gz",
+      "size_hint": 389179012,
+      "expected_md5": "0527dba5764be2aada5be8fa7cd1febe"
+    },
+    "spa": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/spa.tar.gz",
+      "size_hint": 432570119,
+      "expected_md5": "2cbbc80199bdfd82578c7b94a97ae0dd"
+    },
+    "swe": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/swe.tar.gz",
+      "size_hint": 116482893,
+      "expected_md5": "c5a6c5195a746908b34fde4c73de8935"
+    },
+    "tur": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/tur.tar.gz",
+      "size_hint": 111638440,
+      "expected_md5": "53f013906712957365d875ff60c63bbc"
+    },
+    "vie": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/vie.tar.gz",
+      "size_hint": 115880810,
+      "expected_md5": "70a4f08bd733d89eb799cf8fcbbe3f39"
+    },
+    "zho": {
+      "url": "https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets/resolve/8548413f0c7379d784ddba99bec5e3358fa1134a/zho.tar.gz",
+      "size_hint": 119794426,
+      "expected_md5": "55477ad01d5dd79fee38ef56ed4e0e2c"
+    }
+  },
+
   "wikiclir": {
     "source": {
       "url": "https://www.cs.jhu.edu/~kevinduh/a/wikiclir2018/wiki-clir.tar.gz",

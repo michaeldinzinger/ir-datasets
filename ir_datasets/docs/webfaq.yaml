@@ -1,0 +1,679 @@
+_:
+  pretty_name: 'WebFAQ'
+  desc: '
+<p>
+WebFAQ is a multilingual retrieval benchmark built from natural question-answer pairs extracted
+from FAQ pages on the web. Questions are queries and answers are documents. The source retrieval
+collection provides official train and test splits; it does not provide a validation split.
+</p>
+<p>
+This ir_datasets integration provides the 20 languages for which WebFAQ Hard Negatives are available:
+Arabic (<code>ara</code>), Danish (<code>dan</code>), German (<code>deu</code>), English (<code>eng</code>),
+Persian (<code>fas</code>), French (<code>fra</code>), Hindi (<code>hin</code>), Indonesian (<code>ind</code>),
+Italian (<code>ita</code>), Japanese (<code>jpn</code>), Korean (<code>kor</code>), Dutch (<code>nld</code>),
+Polish (<code>pol</code>), Portuguese (<code>por</code>), Russian (<code>rus</code>), Spanish (<code>spa</code>),
+Swedish (<code>swe</code>), Turkish (<code>tur</code>), Vietnamese (<code>vie</code>) and Chinese (<code>zho</code>).
+Corpus answers are deduplicated by exact text while retaining the first source occurrence, and qrels are
+remapped to the retained document IDs.
+</p>
+<p>
+Training scoreddocs combine each positive answer with BM25-mined candidates from the WebFAQ Hard
+Negatives collection. The supplied scores were produced by BGE-M3 and are intended as teacher
+scores for training or knowledge distillation. They are not relevance judgments and no
+scoreddocs are available for the test splits.
+</p>
+<ul>
+  <li><a href="https://dl.acm.org/doi/10.1145/3726302.3731934">Dataset paper (SIGIR 2025)</a></li>
+  <li><a href="https://dl.acm.org/doi/10.1145/3805712.3808621">Hard-negative dataset paper (SIGIR 2026)</a></li>
+  <li><a href="https://huggingface.co/datasets/PaDaS-Lab/webfaq-retrieval">Source retrieval dataset</a></li>
+  <li><a href="https://huggingface.co/datasets/IrvinTopi/WebFAQHardNegatives">Source hard-negative dataset</a></li>
+  <li><a href="https://huggingface.co/datasets/PaDaS-Lab/webfaq-ir-datasets">ir_datasets-ready JSONL archives</a></li>
+  <li>Language identifiers use ISO 639-3 codes.</li>
+  <li>License: Creative Commons Attribution 4.0 (CC BY 4.0).</li>
+</ul>
+<p>
+As with the source collection, qrels are sparse: each question has one confirmed answer, although
+other corpus documents may also answer it.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+ara:
+  desc: '
+<p>
+The Arabic WebFAQ document collection. It contains 141,089 unique answer documents after exact-text
+deduplication of the 142,664 source question-answer pairs. Use <a class="ds-ref">webfaq/ara/train</a>
+and <a class="ds-ref">webfaq/ara/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+ara/train:
+  desc: '
+<p>
+The Arabic WebFAQ training split, containing 132,664 queries and one confirmed relevant answer per query.
+It also provides 6,336,393 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+ara/test:
+  desc: '
+<p>
+The Arabic WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+dan:
+  desc: '
+<p>
+The Danish WebFAQ document collection. It contains 136,939 unique answer documents after exact-text
+deduplication of the 137,686 source question-answer pairs. Use <a class="ds-ref">webfaq/dan/train</a>
+and <a class="ds-ref">webfaq/dan/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+dan/train:
+  desc: '
+<p>
+The Danish WebFAQ training split, containing 127,686 queries and one confirmed relevant answer per query.
+It also provides 6,123,062 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+dan/test:
+  desc: '
+<p>
+The Danish WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+deu:
+  desc: '
+<p>
+The German WebFAQ document collection. It contains 886,794 unique answer documents after exact-text
+deduplication of the 891,201 source question-answer pairs. Use <a class="ds-ref">webfaq/deu/train</a>
+and <a class="ds-ref">webfaq/deu/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+deu/train:
+  desc: '
+<p>
+The German WebFAQ training split, containing 881,201 queries and one confirmed relevant answer per query.
+It also provides 18,702,436 BGE-M3-scored positive and hard-negative documents derived from 96,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+deu/test:
+  desc: '
+<p>
+The German WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+eng:
+  desc: '
+<p>
+The English WebFAQ document collection. It contains 5,252,530 unique answer documents after exact-text
+deduplication of the 5,278,725 source question-answer pairs. Use <a class="ds-ref">webfaq/eng/train</a>
+and <a class="ds-ref">webfaq/eng/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+eng/train:
+  desc: '
+<p>
+The English WebFAQ training split, containing 5,268,725 queries and one confirmed relevant answer per query.
+It also provides 25,632,193 BGE-M3-scored positive and hard-negative documents derived from 128,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+eng/test:
+  desc: '
+<p>
+The English WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+fas:
+  desc: '
+<p>
+The Persian WebFAQ document collection. It contains 226,446 unique answer documents after exact-text
+deduplication of the 226,940 source question-answer pairs. Use <a class="ds-ref">webfaq/fas/train</a>
+and <a class="ds-ref">webfaq/fas/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+fas/train:
+  desc: '
+<p>
+The Persian WebFAQ training split, containing 216,940 queries and one confirmed relevant answer per query.
+It also provides 12,654,983 BGE-M3-scored positive and hard-negative documents derived from 64,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+fas/test:
+  desc: '
+<p>
+The Persian WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+fra:
+  desc: '
+<p>
+The French WebFAQ document collection. It contains 565,142 unique answer documents after exact-text
+deduplication of the 569,505 source question-answer pairs. Use <a class="ds-ref">webfaq/fra/train</a>
+and <a class="ds-ref">webfaq/fra/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+fra/train:
+  desc: '
+<p>
+The French WebFAQ training split, containing 559,505 queries and one confirmed relevant answer per query.
+It also provides 19,140,183 BGE-M3-scored positive and hard-negative documents derived from 96,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+fra/test:
+  desc: '
+<p>
+The French WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+hin:
+  desc: '
+<p>
+The Hindi WebFAQ document collection. It contains 99,897 unique answer documents after exact-text
+deduplication of the 100,031 source question-answer pairs. Use <a class="ds-ref">webfaq/hin/train</a>
+and <a class="ds-ref">webfaq/hin/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+hin/train:
+  desc: '
+<p>
+The Hindi WebFAQ training split, containing 90,031 queries and one confirmed relevant answer per query.
+It also provides 6,374,233 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+hin/test:
+  desc: '
+<p>
+The Hindi WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+ind:
+  desc: '
+<p>
+The Indonesian WebFAQ document collection. It contains 109,774 unique answer documents after exact-text
+deduplication of the 111,315 source question-answer pairs. Use <a class="ds-ref">webfaq/ind/train</a>
+and <a class="ds-ref">webfaq/ind/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+ind/train:
+  desc: '
+<p>
+The Indonesian WebFAQ training split, containing 101,315 queries and one confirmed relevant answer per query.
+It also provides 6,134,393 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+ind/test:
+  desc: '
+<p>
+The Indonesian WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+ita:
+  desc: '
+<p>
+The Italian WebFAQ document collection. It contains 255,534 unique answer documents after exact-text
+deduplication of the 257,803 source question-answer pairs. Use <a class="ds-ref">webfaq/ita/train</a>
+and <a class="ds-ref">webfaq/ita/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+ita/train:
+  desc: '
+<p>
+The Italian WebFAQ training split, containing 247,803 queries and one confirmed relevant answer per query.
+It also provides 18,887,103 BGE-M3-scored positive and hard-negative documents derived from 96,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+ita/test:
+  desc: '
+<p>
+The Italian WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+jpn:
+  desc: '
+<p>
+The Japanese WebFAQ document collection. It contains 307,368 unique answer documents after exact-text
+deduplication of the 309,157 source question-answer pairs. Use <a class="ds-ref">webfaq/jpn/train</a>
+and <a class="ds-ref">webfaq/jpn/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+jpn/train:
+  desc: '
+<p>
+The Japanese WebFAQ training split, containing 299,157 queries and one confirmed relevant answer per query.
+It also provides 19,111,766 BGE-M3-scored positive and hard-negative documents derived from 96,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+jpn/test:
+  desc: '
+<p>
+The Japanese WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+kor:
+  desc: '
+<p>
+The Korean WebFAQ document collection. It contains 101,036 unique answer documents after exact-text
+deduplication of the 102,000 source question-answer pairs. Use <a class="ds-ref">webfaq/kor/train</a>
+and <a class="ds-ref">webfaq/kor/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+kor/train:
+  desc: '
+<p>
+The Korean WebFAQ training split, containing 92,000 queries and one confirmed relevant answer per query.
+It also provides 6,347,985 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+kor/test:
+  desc: '
+<p>
+The Korean WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+nld:
+  desc: '
+<p>
+The Dutch WebFAQ document collection. It contains 368,382 unique answer documents after exact-text
+deduplication of the 370,662 source question-answer pairs. Use <a class="ds-ref">webfaq/nld/train</a>
+and <a class="ds-ref">webfaq/nld/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+nld/train:
+  desc: '
+<p>
+The Dutch WebFAQ training split, containing 360,662 queries and one confirmed relevant answer per query.
+It also provides 18,627,158 BGE-M3-scored positive and hard-negative documents derived from 96,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+nld/test:
+  desc: '
+<p>
+The Dutch WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+pol:
+  desc: '
+<p>
+The Polish WebFAQ document collection. It contains 191,578 unique answer documents after exact-text
+deduplication of the 192,515 source question-answer pairs. Use <a class="ds-ref">webfaq/pol/train</a>
+and <a class="ds-ref">webfaq/pol/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+pol/train:
+  desc: '
+<p>
+The Polish WebFAQ training split, containing 182,515 queries and one confirmed relevant answer per query.
+It also provides 12,775,737 BGE-M3-scored positive and hard-negative documents derived from 64,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+pol/test:
+  desc: '
+<p>
+The Polish WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+por:
+  desc: '
+<p>
+The Portuguese WebFAQ document collection. It contains 208,209 unique answer documents after exact-text
+deduplication of the 209,353 source question-answer pairs. Use <a class="ds-ref">webfaq/por/train</a>
+and <a class="ds-ref">webfaq/por/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+por/train:
+  desc: '
+<p>
+The Portuguese WebFAQ training split, containing 199,353 queries and one confirmed relevant answer per query.
+It also provides 12,731,380 BGE-M3-scored positive and hard-negative documents derived from 64,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+por/test:
+  desc: '
+<p>
+The Portuguese WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+rus:
+  desc: '
+<p>
+The Russian WebFAQ document collection. It contains 383,269 unique answer documents after exact-text
+deduplication of the 387,504 source question-answer pairs. Use <a class="ds-ref">webfaq/rus/train</a>
+and <a class="ds-ref">webfaq/rus/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+rus/train:
+  desc: '
+<p>
+The Russian WebFAQ training split, containing 377,504 queries and one confirmed relevant answer per query.
+It also provides 19,040,146 BGE-M3-scored positive and hard-negative documents derived from 96,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+rus/test:
+  desc: '
+<p>
+The Russian WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+spa:
+  desc: '
+<p>
+The Spanish WebFAQ document collection. It contains 600,855 unique answer documents after exact-text
+deduplication of the 604,661 source question-answer pairs. Use <a class="ds-ref">webfaq/spa/train</a>
+and <a class="ds-ref">webfaq/spa/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+spa/train:
+  desc: '
+<p>
+The Spanish WebFAQ training split, containing 594,661 queries and one confirmed relevant answer per query.
+It also provides 19,015,957 BGE-M3-scored positive and hard-negative documents derived from 96,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+spa/test:
+  desc: '
+<p>
+The Spanish WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+swe:
+  desc: '
+<p>
+The Swedish WebFAQ document collection. It contains 157,849 unique answer documents after exact-text
+deduplication of the 158,738 source question-answer pairs. Use <a class="ds-ref">webfaq/swe/train</a>
+and <a class="ds-ref">webfaq/swe/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+swe/train:
+  desc: '
+<p>
+The Swedish WebFAQ training split, containing 148,738 queries and one confirmed relevant answer per query.
+It also provides 6,155,553 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+swe/test:
+  desc: '
+<p>
+The Swedish WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+tur:
+  desc: '
+<p>
+The Turkish WebFAQ document collection. It contains 144,115 unique answer documents after exact-text
+deduplication of the 144,846 source question-answer pairs. Use <a class="ds-ref">webfaq/tur/train</a>
+and <a class="ds-ref">webfaq/tur/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+tur/train:
+  desc: '
+<p>
+The Turkish WebFAQ training split, containing 134,846 queries and one confirmed relevant answer per query.
+It also provides 6,327,043 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+tur/test:
+  desc: '
+<p>
+The Turkish WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+vie:
+  desc: '
+<p>
+The Vietnamese WebFAQ document collection. It contains 123,283 unique answer documents after exact-text
+deduplication of the 123,972 source question-answer pairs. Use <a class="ds-ref">webfaq/vie/train</a>
+and <a class="ds-ref">webfaq/vie/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+vie/train:
+  desc: '
+<p>
+The Vietnamese WebFAQ training split, containing 113,972 queries and one confirmed relevant answer per query.
+It also provides 6,401,341 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+vie/test:
+  desc: '
+<p>
+The Vietnamese WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+zho:
+  desc: '
+<p>
+The Chinese WebFAQ document collection. It contains 131,606 unique answer documents after exact-text
+deduplication of the 132,491 source question-answer pairs. Use <a class="ds-ref">webfaq/zho/train</a>
+and <a class="ds-ref">webfaq/zho/test</a> for queries and relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
+
+zho/train:
+  desc: '
+<p>
+The Chinese WebFAQ training split, containing 122,491 queries and one confirmed relevant answer per query.
+It also provides 6,379,527 BGE-M3-scored positive and hard-negative documents derived from 32,000
+hard-negative records.
+</p>
+<p>
+The scoreddocs are training signals, not qrels or an evaluation run.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ', 'Dinzinger2026WebFAQ2']
+
+zho/test:
+  desc: '
+<p>
+The Chinese WebFAQ test split, containing 10,000 queries and one confirmed relevant answer per query.
+There are no test scoreddocs.
+</p>
+'
+  bibtex_ids: ['Dinzinger2025WebFAQ']
